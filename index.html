@@ -5,55 +5,291 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GOODNEWS HOME CARE — Fargo, ND | In-Home Care by Faith Myers</title>
   <meta name="description" content="GOODNEWS HOME CARE provides 24/7, CNA-led, QSP-approved in-home care in Fargo, North Dakota. Owned and operated by Faith Myers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --green:#7abf52;
       --teal:#1b7f85;
+      --teal-dark:#15656a;
       --mint:#9dd9c4;
-      --slate-900:#0f172a; --slate-700:#334155; --slate-600:#475569; --slate-100:#f1f5f9; --white:#fff;
-      --max:1200px; --radius:16px; --shadow:0 10px 30px rgba(2,8,23,.08);
+      --mint-light:#e8f7f3;
+      --slate-900:#0f172a;
+      --slate-800:#1e293b;
+      --slate-700:#334155;
+      --slate-600:#475569;
+      --slate-100:#f1f5f9;
+      --white:#fff;
+      --max:1280px;
+      --radius:20px;
+      --shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg:0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--slate-800);background:linear-gradient(180deg,var(--slate-100),#fff);}
-    a{color:var(--teal);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid #e5e7eb;z-index:50}
-    header .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--slate-900)}
-    .brand img{height:46px}
-    nav a{margin-left:18px;color:var(--slate-700)}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;box-shadow:var(--shadow)}
-    .btn:hover{background:#15656a}
-    .btn-outline{background:#fff;color:var(--teal);border:1px solid #bfe7ea}
-    .btn-outline:hover{background:#effafa}
-    .hero{padding:72px 0}
-    .grid{display:grid;gap:28px}
-    @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(27,127,133,.08);color:var(--teal);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
-    h1{font-size:40px;line-height:1.2;margin:14px 0 8px;color:var(--slate-900)}
-    p.lead{font-size:18px;color:var(--slate-600);max-width:60ch}
-    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
-    section{padding:72px 0}
-    h2{font-size:32px;color:var(--slate-900);margin:0 0 6px}
-    .muted{color:var(--slate-600)}
-    .feature{display:flex;gap:12px}
-    .icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(26,128,133,.07);color:var(--teal);flex:0 0 auto}
-    ul.clean{list-style:disc;padding-left:18px;margin:10px 0}
-    .cards{display:grid;gap:18px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      color:var(--slate-800);
+      background:var(--white);
+      line-height:1.6;
+    }
+    a{color:var(--teal);text-decoration:none;transition:all 0.2s}
+    a:hover{color:var(--teal-dark)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+    
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      backdrop-filter:saturate(180%) blur(12px);
+      background:rgba(255,255,255,0.9);
+      border-bottom:1px solid rgba(0,0,0,0.08);
+      z-index:50;
+      box-shadow:0 1px 3px rgba(0,0,0,0.05);
+    }
+    header .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 0;
+      gap:32px;
+    }
+    .brand{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      font-weight:700;
+      color:var(--slate-900);
+      font-size:20px;
+    }
+    .brand img{height:72px;width:auto}
+    nav{display:flex;gap:32px;align-items:center}
+    nav a{
+      color:var(--slate-700);
+      font-weight:500;
+      font-size:15px;
+      padding:8px 0;
+      position:relative;
+    }
+    nav a:hover{color:var(--teal);text-decoration:none}
+    
+    /* Buttons */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:var(--teal);
+      color:#fff;
+      padding:14px 28px;
+      border-radius:12px;
+      border:0;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+      font-weight:600;
+      font-size:15px;
+      transition:all 0.2s;
+      font-family:inherit;
+    }
+    .btn:hover{background:var(--teal-dark);transform:translateY(-1px);box-shadow:var(--shadow-lg);text-decoration:none}
+    .btn-outline{
+      background:#fff;
+      color:var(--teal);
+      border:2px solid var(--teal);
+      box-shadow:none;
+    }
+    .btn-outline:hover{background:var(--mint-light);border-color:var(--teal-dark);color:var(--teal-dark)}
+    
+    /* Hero */
+    .hero{
+      padding:80px 0 100px;
+      background:linear-gradient(135deg, var(--mint-light) 0%, var(--white) 100%);
+    }
+    .grid{display:grid;gap:48px}
+    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr;align-items:center}}
+    
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(27,127,133,0.12);
+      color:var(--teal);
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:24px;
+    }
+    
+    h1{
+      font-size:56px;
+      line-height:1.1;
+      margin:0 0 24px;
+      color:var(--slate-900);
+      font-weight:700;
+      letter-spacing:-0.02em;
+    }
+    p.lead{
+      font-size:20px;
+      color:var(--slate-600);
+      line-height:1.7;
+      margin-bottom:32px;
+    }
+    
+    /* Cards */
+    .card{
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-lg);
+      padding:32px;
+      border:1px solid rgba(0,0,0,0.05);
+    }
+    
+    section{padding:100px 0}
+    h2{
+      font-size:42px;
+      color:var(--slate-900);
+      margin:0 0 16px;
+      font-weight:700;
+      letter-spacing:-0.02em;
+    }
+    h3{
+      font-size:22px;
+      color:var(--slate-900);
+      margin:0 0 12px;
+      font-weight:600;
+    }
+    .muted{color:var(--slate-600);line-height:1.7}
+    
+    /* Features */
+    .feature{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+    .icon{
+      width:48px;
+      height:48px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:var(--mint-light);
+      font-size:24px;
+      flex:0 0 auto;
+    }
+    
+    ul.clean{
+      list-style:none;
+      padding:0;
+      margin:16px 0;
+    }
+    ul.clean li{
+      padding:12px 0 12px 32px;
+      position:relative;
+      color:var(--slate-700);
+    }
+    ul.clean li:before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:var(--green);
+      font-weight:700;
+      font-size:18px;
+    }
+    
+    /* Service Cards */
+    .cards{display:grid;gap:32px}
     @media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
-    form label{font-size:14px;font-weight:600;display:block;margin:8px 0 6px}
-    input,textarea{width:100%;padding:12px 12px;border:1px solid #e5e7eb;border-radius:10px;background:#fff;font:inherit}
-    textarea{min-height:120px}
-    footer{border-top:1px solid #e5e7eb}
+    
+    .service-card{
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:36px 28px;
+      border:1px solid rgba(0,0,0,0.05);
+      transition:all 0.3s;
+    }
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+    }
+    .service-card h3{color:var(--teal);margin-bottom:16px}
+    
+    /* Info boxes */
+    .info-row{
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+      margin-top:24px;
+      font-size:15px;
+    }
+    .info-item{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--slate-600);
+      font-weight:500;
+    }
+    
+    /* Form */
+    form label{
+      font-size:14px;
+      font-weight:600;
+      display:block;
+      margin:20px 0 8px;
+      color:var(--slate-800);
+    }
+    form label:first-of-type{margin-top:0}
+    input,textarea{
+      width:100%;
+      padding:14px 16px;
+      border:2px solid #e5e7eb;
+      border-radius:12px;
+      background:#fff;
+      font:inherit;
+      font-size:15px;
+      transition:all 0.2s;
+    }
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:var(--teal);
+      box-shadow:0 0 0 3px rgba(27,127,133,0.1);
+    }
+    textarea{min-height:140px;resize:vertical}
+    
+    /* Footer */
+    footer{
+      border-top:1px solid #e5e7eb;
+      background:var(--slate-100);
+      padding:60px 0 40px;
+    }
+    .footer-grid{
+      display:grid;
+      gap:48px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    }
+    footer .brand{font-size:18px;margin-bottom:16px}
+    footer .brand img{height:60px}
+    footer strong{color:var(--slate-900);display:block;margin-bottom:12px;font-size:16px}
+    footer p{margin:8px 0}
+    footer a{color:var(--slate-600);font-size:15px}
+    footer a:hover{color:var(--teal)}
+    
+    /* Responsive */
+    @media(max-width:900px){
+      h1{font-size:40px}
+      h2{font-size:32px}
+      nav{display:none}
+      .grid-2{grid-template-columns:1fr}
+      section{padding:60px 0}
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav" aria-label="Primary">
+    <div class="container nav">
       <div class="brand">
-        <!-- replace src with your actual logo filename -->
-        <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo">
+        <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
         <span>GOODNEWS HOME CARE</span>
       </div>
       <nav>
@@ -62,7 +298,7 @@
         <a href="#credentials">Credentials</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn" href="#contact" aria-label="Request services">Request Care</a>
+      <a class="btn" href="#contact">Request Care</a>
     </div>
   </header>
 
@@ -71,29 +307,51 @@
     <section class="hero">
       <div class="container grid grid-2">
         <div>
-          <div class="badge">Fargo, North Dakota • QSP Approved</div>
-          <h1>24/7 In-Home Care by <span style="color:var(--teal)">GOODNEWS HOME CARE</span></h1>
+          <div class="badge">📍 Fargo, North Dakota • QSP Approved</div>
+          <h1>Compassionate 24/7 In-Home Care</h1>
           <p class="lead">
-            CNA-led, North Dakota QSP-approved home support for adults and individuals with special needs.
-            Owned and operated by <strong>Faith Myers</strong>. Available Monday through Sunday — 24 hours.
+            CNA-led, North Dakota QSP-approved home support for adults and individuals with special needs. 
+            Owned and operated by Faith Myers.
           </p>
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="#contact">Call (602) 621-5992</a>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+            <a class="btn" href="tel:+16026215992">📞 Call (602) 621-5992</a>
             <a class="btn btn-outline" href="#services">View Services</a>
           </div>
-          <div style="margin-top:16px; display:flex; gap:20px; color:var(--slate-600); font-size:14px">
-            <div>📍 1741 42nd St S, Fargo, ND 58103</div>
-            <div>🕒 24/7 Availability</div>
+          <div class="info-row">
+            <div class="info-item">📍 1741 42nd St S, Fargo, ND</div>
+            <div class="info-item">🕒 Available 24/7</div>
           </div>
         </div>
-        <div>
-          <div class="card">
-            <h3 style="margin:0 0 12px;color:var(--slate-900)">How We Help</h3>
-            <div class="grid" style="grid-template-columns:1fr 1fr; gap:16px">
-              <div class="feature"><div class="icon">🩺</div><div><strong>Personal Care</strong><div class="muted">Bathing, dressing, grooming, mobility.</div></div></div>
-              <div class="feature"><div class="icon">🏠</div><div><strong>Homemaker</strong><div class="muted">Light housekeeping, laundry, meals.</div></div></div>
-              <div class="feature"><div class="icon">🤝</div><div><strong>Companionship</strong><div class="muted">Supervision & engagement.</div></div></div>
-              <div class="feature"><div class="icon">💚</div><div><strong>Special Needs</strong><div class="muted">Autism & disability support.</div></div></div>
+        <div class="card">
+          <h3 style="margin-top:0;font-size:26px">How We Support You</h3>
+          <div style="display:grid;gap:24px;margin-top:24px">
+            <div class="feature">
+              <div class="icon">🩺</div>
+              <div>
+                <strong style="display:block;color:var(--slate-900);margin-bottom:4px">Personal Care</strong>
+                <div class="muted">Bathing, dressing, grooming, and mobility assistance.</div>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">🏠</div>
+              <div>
+                <strong style="display:block;color:var(--slate-900);margin-bottom:4px">Homemaker Services</strong>
+                <div class="muted">Light housekeeping, laundry, and meal preparation.</div>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">🤝</div>
+              <div>
+                <strong style="display:block;color:var(--slate-900);margin-bottom:4px">Companionship</strong>
+                <div class="muted">Supervision, engagement, and respite care.</div>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">💚</div>
+              <div>
+                <strong style="display:block;color:var(--slate-900);margin-bottom:4px">Special Needs Support</strong>
+                <div class="muted">Experienced care for autism and developmental disabilities.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -103,35 +361,35 @@
     <!-- Services -->
     <section id="services">
       <div class="container">
-        <div style="text-align:center;margin-bottom:24px">
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px">
           <h2>Our Services</h2>
-          <p class="muted">Serving Fargo, ND — in the client’s own home.</p>
+          <p class="muted" style="font-size:18px">Comprehensive in-home care tailored to your needs, delivered with professionalism and compassion.</p>
         </div>
         <div class="cards">
-          <div class="card">
+          <div class="service-card">
             <h3>Personal Care (ADLs)</h3>
             <ul class="clean">
-              <li>Bathing, dressing, grooming</li>
-              <li>Mobility & transfers; fall safety</li>
-              <li>Toileting & incontinence support</li>
+              <li>Bathing, dressing, and grooming assistance</li>
+              <li>Mobility support and safe transfers</li>
+              <li>Toileting and incontinence care</li>
               <li>Medication reminders</li>
             </ul>
           </div>
-          <div class="card">
-            <h3>Homemaker & Errands</h3>
+          <div class="service-card">
+            <h3>Homemaker Services</h3>
             <ul class="clean">
-              <li>Light housekeeping, laundry</li>
-              <li>Meal planning & preparation</li>
-              <li>Grocery/pharmacy pick-ups</li>
-              <li>Appointment support (mileage logged)</li>
+              <li>Light housekeeping and laundry</li>
+              <li>Meal planning and preparation</li>
+              <li>Grocery and pharmacy errands</li>
+              <li>Transportation to appointments</li>
             </ul>
           </div>
-          <div class="card">
+          <div class="service-card">
             <h3>Companionship & Respite</h3>
             <ul class="clean">
-              <li>Engagement & supervision</li>
-              <li>Short-break coverage for caregivers</li>
-              <li>Experience with autism & sensory needs</li>
+              <li>Meaningful engagement and supervision</li>
+              <li>Relief care for family caregivers</li>
+              <li>Autism and sensory needs support</li>
               <li>Faith-based and culturally sensitive care</li>
             </ul>
           </div>
@@ -139,28 +397,44 @@
       </div>
     </section>
 
-    <!-- Why -->
-    <section style="background:rgba(27,127,133,.05)">
-      <div class="container grid grid-2" style="align-items:center">
+    <!-- Why Choose Us -->
+    <section style="background:var(--mint-light)">
+      <div class="container grid grid-2">
         <div>
-          <h2>Why families choose GOODNEWS HOME CARE</h2>
-          <ul class="clean">
-            <li>Owned by <strong>Faith Myers</strong>, CNA & ND-approved QSP</li>
-            <li>Fully insured business: GOODNEWS HOME CARE</li>
-            <li>24/7 availability, including weekends & nights</li>
-            <li>Clear service logs, invoices, and notes for case managers</li>
+          <h2>Why Families Trust GOODNEWS HOME CARE</h2>
+          <ul class="clean" style="font-size:17px">
+            <li>Owned by Faith Myers, CNA and ND-approved QSP</li>
+            <li>Fully insured and registered business</li>
+            <li>24/7 availability including weekends and nights</li>
+            <li>Detailed service logs and documentation for case managers</li>
+            <li>Consistent, reliable, and compassionate care</li>
           </ul>
-          <a class="btn" href="#contact">Request care →</a>
+          <a class="btn" href="#contact" style="margin-top:24px">Start Your Care Plan →</a>
         </div>
         <div class="card">
-          <h3 style="margin-top:0">Service Area & Office</h3>
-          <p class="muted">
-            📍 1741 42nd St S, Fargo, ND 58103<br>
-            📞 (602) 621-5992<br>
-            ✉️ goodnewshomecare41@gmail.com
-          </p>
-          <p class="muted">Serving: <strong>Fargo, North Dakota</strong></p>
-          <p class="muted">Hours: <strong>Monday – Sunday, 24 hours</strong></p>
+          <h3 style="margin-top:0;font-size:24px">Contact Information</h3>
+          <div style="margin:20px 0">
+            <strong style="display:block;color:var(--slate-900);margin-bottom:8px">Office Location</strong>
+            <p class="muted">
+              1741 42nd St S<br>
+              Fargo, ND 58103
+            </p>
+          </div>
+          <div style="margin:20px 0">
+            <strong style="display:block;color:var(--slate-900);margin-bottom:8px">Phone</strong>
+            <p class="muted"><a href="tel:+16026215992" style="font-size:18px;font-weight:600">(602) 621-5992</a></p>
+          </div>
+          <div style="margin:20px 0">
+            <strong style="display:block;color:var(--slate-900);margin-bottom:8px">Email</strong>
+            <p class="muted">
+              <a href="mailto:goodnewshomecare41@gmail.com">goodnewshomecare41@gmail.com</a><br>
+              <a href="mailto:faithmyers687@gmail.com">faithmyers687@gmail.com</a>
+            </p>
+          </div>
+          <div style="margin:20px 0 0">
+            <strong style="display:block;color:var(--slate-900);margin-bottom:8px">Hours</strong>
+            <p class="muted">Monday – Sunday, 24 hours</p>
+          </div>
         </div>
       </div>
     </section>
@@ -168,94 +442,110 @@
     <!-- Credentials -->
     <section id="credentials">
       <div class="container">
-        <div style="text-align:center;margin-bottom:24px">
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px">
           <h2>Credentials & Compliance</h2>
-          <p class="muted">Professional, insured, and approved to serve in North Dakota.</p>
+          <p class="muted" style="font-size:18px">Professional, insured, and approved to serve clients throughout North Dakota.</p>
         </div>
         <div class="cards">
-          <div class="card">
-            <h3 style="margin-top:0">CNA – North Dakota</h3>
-            <p class="muted">Faith Myers is an active Certified Nursing Assistant with hands-on caregiving experience.</p>
+          <div class="service-card">
+            <div class="icon" style="margin-bottom:16px">✓</div>
+            <h3>Certified Nursing Assistant</h3>
+            <p class="muted">Faith Myers is an active CNA in North Dakota with extensive hands-on caregiving experience.</p>
           </div>
-          <div class="card">
-            <h3 style="margin-top:0">ND QSP – Approved</h3>
-            <p class="muted">GOODNEWS HOME CARE is approved as a Qualified Service Provider (QSP) to serve North Dakota clients.</p>
+          <div class="service-card">
+            <div class="icon" style="margin-bottom:16px">✓</div>
+            <h3>ND QSP Approved</h3>
+            <p class="muted">GOODNEWS HOME CARE is approved as a Qualified Service Provider to serve North Dakota clients.</p>
           </div>
-          <div class="card">
-            <h3 style="margin-top:0">Registered Business</h3>
-            <p class="muted">Registered as <strong>GOODNEWS HOME CARE</strong>, operating from Fargo, ND, and fully insured.</p>
+          <div class="service-card">
+            <div class="icon" style="margin-bottom:16px">✓</div>
+            <h3>Registered & Insured</h3>
+            <p class="muted">Registered business operating from Fargo, ND with full liability coverage and workers compensation.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about">
-      <div class="container grid grid-2" style="align-items:center">
+    <section id="about" style="background:var(--slate-100)">
+      <div class="container grid grid-2">
+        <div class="card">
+          <div class="icon" style="margin-bottom:20px;width:64px;height:64px;font-size:32px">📋</div>
+          <h3 style="margin-top:0;font-size:24px">Documentation Ready</h3>
+          <ul class="clean">
+            <li>Daily service logs and timesheets</li>
+            <li>Invoices and mileage records</li>
+            <li>Client agreements and care summaries</li>
+            <li>Direct communication with case managers</li>
+          </ul>
+          <p class="muted" style="font-size:14px;margin-top:20px;padding-top:20px;border-top:1px solid #e5e7eb">
+            Case managers can request documentation at <strong>goodnewshomecare41@gmail.com</strong>
+          </p>
+        </div>
         <div>
           <h2>About Faith Myers</h2>
-          <p class="muted">
-            “I started GOODNEWS HOME CARE because I’ve worked closely with families and saw how much relief
-            consistent, kind in-home care can bring. My promise is to show up on time, document every visit,
-            and treat every client with dignity.”
+          <p class="muted" style="font-size:18px;line-height:1.8;margin:24px 0">
+            "I started GOODNEWS HOME CARE because I've worked closely with families and saw how much relief 
+            consistent, compassionate in-home care can bring. My promise is simple: show up on time, document 
+            every visit thoroughly, and treat every client with the dignity and respect they deserve."
           </p>
-          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn btn-outline" href="#contact">Ask a question</a>
-            <a class="btn" href="#contact">Start service</a>
+          <p class="muted" style="font-size:18px;line-height:1.8;margin:24px 0">
+            With years of CNA experience and specialized training in autism and special needs care, I understand 
+            that each client and family has unique needs. That's why GOODNEWS HOME CARE offers flexible, 
+            personalized care plans available around the clock.
+          </p>
+          <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+            <a class="btn" href="#contact">Start Service</a>
+            <a class="btn btn-outline" href="#contact">Ask a Question</a>
           </div>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Documentation Ready</h3>
-          <ul class="clean">
-            <li>Service Logs & Timesheets</li>
-            <li>Invoices & Mileage Records</li>
-            <li>Client Agreements & Care Summaries</li>
-          </ul>
-          <p class="muted" style="font-size:13px">Case managers can request documentation by email: <strong>goodnewshomecare41@gmail.com</strong> or backup: <strong>faithmyers687@gmail.com</strong>.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" style="background:rgba(27,127,133,.05)">
+    <section id="contact">
       <div class="container">
-        <div style="text-align:center;margin-bottom:24px">
-          <h2>Contact GOODNEWS HOME CARE</h2>
-          <p class="muted">Available 24/7 in Fargo, ND. Call, email, or send a request.</p>
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px">
+          <h2>Get Started Today</h2>
+          <p class="muted" style="font-size:18px">Available 24/7 in Fargo, ND. Call, email, or send us a message to discuss your care needs.</p>
         </div>
-        <div class="grid" style="grid-template-columns:2fr 1fr; gap:20px">
+        <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:48px">
           <div class="card">
-            <form action="#" method="post" aria-label="Contact form">
+            <form action="#" method="post">
               <label for="name">Your Name</label>
               <input id="name" name="name" required placeholder="Jane Doe" />
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" required placeholder="(602) 621-5992" />
-              <label for="email">Email</label>
+              
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" required placeholder="(602) 621-5992" type="tel" />
+              
+              <label for="email">Email Address</label>
               <input id="email" name="email" type="email" required placeholder="you@example.com" />
-              <label for="topic">Service Type</label>
-              <input id="topic" name="topic" placeholder="Personal Care, Homemaker, Respite…" />
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" required placeholder="Describe your care needs, schedule, and address in Fargo."></textarea>
-              <button class="btn" type="submit">Send Request</button>
-              <p class="muted" style="font-size:12px">Or email directly: <strong>goodnewshomecare41@gmail.com</strong></p>
+              
+              <label for="topic">Type of Service Needed</label>
+              <input id="topic" name="topic" placeholder="Personal Care, Homemaker, Respite..." />
+              
+              <label for="message">Tell Us About Your Care Needs</label>
+              <textarea id="message" name="message" required placeholder="Please describe your situation, preferred schedule, and any specific care requirements."></textarea>
+              
+              <button class="btn" type="submit" style="margin-top:24px;width:100%">Send Request</button>
+              
+              <p class="muted" style="font-size:13px;margin-top:16px;text-align:center">
+                Prefer to email directly? <strong><a href="mailto:goodnewshomecare41@gmail.com">goodnewshomecare41@gmail.com</a></strong>
+              </p>
             </form>
           </div>
-          <div class="grid" style="gap:20px">
+          <div style="display:grid;gap:24px;align-content:start">
             <div class="card">
-              <h3 style="margin-top:0">Office</h3>
-              <p class="muted">
-                GOODNEWS HOME CARE<br>
-                1741 42nd St S<br>
-                Fargo, ND 58103
-              </p>
+              <h3 style="margin-top:0">Quick Response</h3>
+              <p class="muted">We typically respond within 2 hours during business hours and within 4 hours after hours.</p>
             </div>
             <div class="card">
-              <h3 style="margin-top:0">Direct Contacts</h3>
-              <p class="muted">
-                Phone: <a href="tel:+16026215992">(602) 621-5992</a><br>
-                Primary Email: <a href="mailto:goodnewshomecare41@gmail.com">goodnewshomecare41@gmail.com</a><br>
-                Backup Email: <a href="mailto:faithmyers687@gmail.com">faithmyers687@gmail.com</a>
-              </p>
+              <h3 style="margin-top:0">Service Area</h3>
+              <p class="muted">Currently serving Fargo and surrounding areas in North Dakota.</p>
+            </div>
+            <div class="card">
+              <h3 style="margin-top:0">Emergency Care</h3>
+              <p class="muted">For urgent same-day care needs, please call directly:<br><strong style="font-size:18px;color:var(--teal)">(602) 621-5992</strong></p>
             </div>
           </div>
         </div>
@@ -264,30 +554,42 @@
   </main>
 
   <footer>
-    <div class="container" style="padding:26px 0; display:grid; gap:16px; grid-template-columns:repeat(3,1fr)">
+    <div class="container footer-grid">
       <div>
         <div class="brand">
-          <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo">
-          <span>GOODNEWS HOME CARE</span>
+          <img src="https://raw.githubusercontent.com/user-attachments/assets/c5e5c5e5-8e5e-4e5e-8e5e-8e5e8e5e8e5e" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+          <span>GOODNEWS<br>HOME CARE</span>
         </div>
-        <p class="muted" style="margin:8px 0 0">
-          24/7 in-home care in Fargo, ND. CNA-led and QSP-approved.
+        <p class="muted">
+          Professional 24/7 in-home care serving Fargo, North Dakota. CNA-led and QSP-approved.
         </p>
       </div>
       <div>
-        <strong style="color:var(--slate-900)">Quick Links</strong>
-        <p class="muted">
-          <a href="#services">Services</a><br>
+        <strong>Quick Links</strong>
+        <p>
+          <a href="#services">Our Services</a><br>
           <a href="#credentials">Credentials</a><br>
-          <a href="#contact">Contact</a>
+          <a href="#about">About Faith</a><br>
+          <a href="#contact">Contact Us</a>
         </p>
       </div>
       <div>
-        <strong style="color:var(--slate-900)">Compliance</strong>
+        <strong>Contact</strong>
         <p class="muted">
-          ND CNA • ND QSP Approved<br>
-          Registered: GOODNEWS HOME CARE<br>
-          © <span id="year"></span> GOODNEWS HOME CARE. All rights reserved.
+          Phone: <a href="tel:+16026215992">(602) 621-5992</a><br>
+          Email: <a href="mailto:goodnewshomecare41@gmail.com">goodnewshomecare41@gmail.com</a><br>
+          1741 42nd St S<br>
+          Fargo, ND 58103
+        </p>
+      </div>
+      <div>
+        <strong>Compliance</strong>
+        <p class="muted">
+          ND Certified Nursing Assistant<br>
+          ND QSP Approved Provider<br>
+          Registered & Insured Business<br>
+          <br>
+          © <span id="year"></span> GOODNEWS HOME CARE<br>All rights reserved.
         </p>
       </div>
     </div>
