@@ -51,7 +51,7 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:12px 0;
+      padding:20px 0;
       gap:32px;
     }
     .brand{
@@ -62,8 +62,7 @@
       color:var(--slate-900);
       font-size:20px;
     }
-    .brand img{height:80px;width:auto}
-    .brand-text{display:inline}
+    .brand img{height:72px;width:auto}
     nav{display:flex;gap:32px;align-items:center}
     nav a{
       color:var(--slate-700);
@@ -270,7 +269,7 @@
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     }
     footer .brand{font-size:18px;margin-bottom:16px}
-    footer .brand img{height:120px}
+    footer .brand img{height:60px}
     footer strong{color:var(--slate-900);display:block;margin-bottom:12px;font-size:16px}
     footer p{margin:8px 0}
     footer a{color:var(--slate-600);font-size:15px}
@@ -290,7 +289,8 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+        <img src="https://raw.githubusercontent.com/user-attachments/assets/c5e5c5e5-8e5e-4e5e-8e5e-8e5e8e5e8e5e" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+        <span>GOODNEWS HOME CARE</span>
       </div>
       <nav>
         <a href="#services">Services</a>
@@ -511,11 +511,7 @@
         </div>
         <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:48px">
           <div class="card">
-            <form action="https://formsubmit.co/goodnewshomecare41@gmail.com" method="POST">
-              <input type="hidden" name="_subject" value="New Care Request from Website">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              
+            <form action="#" method="post">
               <label for="name">Your Name</label>
               <input id="name" name="name" required placeholder="Jane Doe" />
               
@@ -526,7 +522,7 @@
               <input id="email" name="email" type="email" required placeholder="you@example.com" />
               
               <label for="topic">Type of Service Needed</label>
-              <input id="topic" name="service_type" placeholder="Personal Care, Homemaker, Respite..." />
+              <input id="topic" name="topic" placeholder="Personal Care, Homemaker, Respite..." />
               
               <label for="message">Tell Us About Your Care Needs</label>
               <textarea id="message" name="message" required placeholder="Please describe your situation, preferred schedule, and any specific care requirements."></textarea>
@@ -561,7 +557,8 @@
     <div class="container footer-grid">
       <div>
         <div class="brand">
-          <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+          <img src="https://raw.githubusercontent.com/user-attachments/assets/c5e5c5e5-8e5e-4e5e-8e5e-8e5e8e5e8e5e" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+          <span>GOODNEWS<br>HOME CARE</span>
         </div>
         <p class="muted">
           Professional 24/7 in-home care serving Fargo, North Dakota. CNA-led and QSP-approved.
