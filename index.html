@@ -7,7 +7,7 @@
   <meta name="description" content="GOODNEWS HOME CARE provides 24/7, CNA-led, QSP-approved in-home care in Fargo, North Dakota. Owned and operated by Faith Myers." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --green:#7abf52;
@@ -51,7 +51,7 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:12px 0;
+      padding:20px 0;
       gap:32px;
     }
     .brand{
@@ -61,9 +61,32 @@
       font-weight:700;
       color:var(--slate-900);
       font-size:20px;
+      flex-direction:column;
     }
-    .brand img{height:80px;width:auto}
-    .brand-text{display:inline}
+    .brand-name{
+      font-weight:700;
+      color:var(--slate-900);
+      font-size:20px;
+    }
+    .brand-tagline{
+      font-family:'Dancing Script',cursive;
+      font-size:22px;
+      color:var(--teal);
+      font-weight:600;
+      margin-top:-8px;
+      animation:fadeInUp 1s ease-out;
+    }
+    @keyframes fadeInUp{
+      from{
+        opacity:0;
+        transform:translateY(10px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+    .brand img{height:72px;width:auto}
     nav{display:flex;gap:32px;align-items:center}
     nav a{
       color:var(--slate-700);
@@ -270,7 +293,7 @@
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     }
     footer .brand{font-size:18px;margin-bottom:16px}
-    footer .brand img{height:120px}
+    footer .brand img{height:60px}
     footer strong{color:var(--slate-900);display:block;margin-bottom:12px;font-size:16px}
     footer p{margin:8px 0}
     footer a{color:var(--slate-600);font-size:15px}
@@ -290,7 +313,11 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+        <div style="display:flex;gap:16px;align-items:center">
+          <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+          <span class="brand-name">GOODNEWS HOME CARE</span>
+        </div>
+        <span class="brand-tagline">Compassionate care you can trust</span>
       </div>
       <nav>
         <a href="#services">Services</a>
@@ -562,6 +589,7 @@
       <div>
         <div class="brand">
           <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+          <span>GOODNEWS<br>HOME CARE</span>
         </div>
         <p class="muted">
           Professional 24/7 in-home care serving Fargo, North Dakota. CNA-led and QSP-approved.
