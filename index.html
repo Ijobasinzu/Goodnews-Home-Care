@@ -56,25 +56,27 @@
     }
     .brand{
       display:flex;
-      gap:16px;
+      gap:12px;
       align-items:center;
-      font-weight:700;
-      color:var(--slate-900);
-      font-size:20px;
+    }
+    .brand-content{
+      display:flex;
       flex-direction:column;
+      gap:4px;
     }
     .brand-name{
       font-weight:700;
       color:var(--slate-900);
-      font-size:20px;
+      font-size:24px;
+      line-height:1.2;
     }
     .brand-tagline{
       font-family:'Dancing Script',cursive;
-      font-size:22px;
+      font-size:17px;
       color:var(--teal);
       font-weight:600;
-      margin-top:-8px;
       animation:fadeInUp 1s ease-out;
+      line-height:1;
     }
     @keyframes fadeInUp{
       from{
@@ -313,11 +315,11 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <div style="display:flex;gap:16px;align-items:center">
-          <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+        <img src="goodnews-logo.png" alt="GOODNEWS HOME CARE logo" onerror="this.style.display='none'">
+        <div class="brand-content">
           <span class="brand-name">GOODNEWS HOME CARE</span>
+          <span class="brand-tagline">Compassionate care you can trust</span>
         </div>
-        <span class="brand-tagline">Compassionate care you can trust</span>
       </div>
       <nav>
         <a href="#services">Services</a>
